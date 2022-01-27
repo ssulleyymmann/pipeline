@@ -1,35 +1,5 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@ssulleyymmann 
-patebija
-/
-simple-python-pyinstaller-app
-Public
-forked from jenkins-docs/simple-python-pyinstaller-app
-Code
-Pull requests
-3
-Actions
-Projects
-Wiki
-Security
-Insights
-simple-python-pyinstaller-app/Jenkinsfile
-@bijan2007
-bijan2007 Cleanup
-Latest commit 2684dc9 on Jun 15, 2020
- History
- 1 contributor
-83 lines (82 sloc)  4.68 KB
-   
 pipeline {
-//None parameter in the agent section means that no global agent will be allocated for the entire Pipeline’s
-//execution and that each stage directive must specify its own agent section.
+
     agent none
     stages {
         stage('Build') {
@@ -110,16 +80,4 @@ pipeline {
         }
     }
 }
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
+
