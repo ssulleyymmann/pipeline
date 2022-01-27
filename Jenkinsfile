@@ -8,7 +8,7 @@ pipeline {
             steps {
 sh 'ls'
 sh 'pwd'
-sh 'docker build  -t vfanalytics -f $WORKSPACE/Dockerfile .'
+sh 'docker build  -t vfanalytics -f Dockerfile .'
             }
         }
 
