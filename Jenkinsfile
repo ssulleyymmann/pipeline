@@ -1,18 +1,18 @@
+
 pipeline {
 
     agent none
     stages {
-        stage('Build images')
-        {
+        stage('Build') {
+
             steps {
-                      echo "workspace directory is ${workspace}"
-                      sh 'ls'
-                      sh 'pwd'
-                       sh 'docker build  -t vfAnalytics -f $WORKSPACE/Dockerfile .'
+echo "workspace directory is ${workspace}"
+sh 'ls'
+sh 'pwd'
+sh 'docker build  -t vfAnalytics -f $WORKSPACE/Dockerfile .'
             }
-   
-           
         }
+
+
     }
 }
-
