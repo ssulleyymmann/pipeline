@@ -1,0 +1,12 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args: [ 'build', '-t', 'eu.gcr.io/dataritma-vf-myaml/vf-analytics', '.' ]
+
+  - name: gcr.io/cloud-builders/docker
+    args: [ 'push', 'eu.gcr.io/dataritma-vf-myaml/vf-analytics' ]
+
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["run", "deploy", "vf-analytics", "--image=eu.gcr.io/dataritma-vf-myaml/vf-analytics", "--region=europe-west3"]
+    timeout: "500s"
+options:
+  logging: CLOUD_LOGGING_ONLY
